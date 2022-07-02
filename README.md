@@ -31,7 +31,7 @@ First. Build docker with that commend.
 
 docker-compose build
 
-After this, you could run app with this commend.
+After this, you could run app with this command.
 
 docker-compose up
 
