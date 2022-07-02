@@ -50,8 +50,8 @@ def possible_moves(figure, position):
 def check_possibility_of_move(figure, current_position, destination_position):
     """Check possibility of moves."""
     response_data = {
-        'move': None,  # to zapytania czy to powinno zostać
-        'error': destination_position,
+        'move': None,
+        'error': None,
         'figure': figure,
         'currentField': current_position,
         'destField': destination_position,
@@ -68,7 +68,8 @@ def check_possibility_of_move(figure, current_position, destination_position):
         return response(response_data, 404)
 
     actual_figure = possible_figures[figure](current_position)
-    destination_position = BoardField.create_valid_board(destination_position)
+    destination_position = possible_figures[figure]\
+        (destination_position).position
     if actual_figure.validate_move(destination_position):
         response_data['move'] = 'valid'
     else:
@@ -77,4 +78,4 @@ def check_possibility_of_move(figure, current_position, destination_position):
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host='0.0.0.0')
