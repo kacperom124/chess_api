@@ -20,4 +20,4 @@ class BoardField:
 
     def __str__(self):
         """Return string in format: a1, b2."""
-        return f'{chr(96 + self.x)}{self.y}'
+        return f"{chr(96 + self.x)}{self.y}"

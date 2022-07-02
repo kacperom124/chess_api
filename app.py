@@ -10,5 +10,5 @@ app = Flask(__name__)
 
 configure_routes(app)
 
-if __name__ == '__main__':
-    app.run(host='0.0.0.0')
+if __name__ == "__main__":
+    app.run(host="0.0.0.0")

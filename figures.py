@@ -221,10 +221,10 @@ class Queen(SuperFigure):
 
 
 possible_figures = {
-    'king': King,
-    'queen': Queen,
-    'rook': Rook,
-    'bishop': Bishop,
-    'knight': Knight,
-    'pawn': Pawn,
+    "king": King,
+    "queen": Queen,
+    "rook": Rook,
+    "bishop": Bishop,
+    "knight": Knight,
+    "pawn": Pawn,
 }
